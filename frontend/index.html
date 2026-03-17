@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SHL Assessment Recommender</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f0f4f8;
+      color: #1a202c;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #0f4c81;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    header img { height: 36px; }
+    header h1 { font-size: 1.4rem; font-weight: 600; }
+    header span { font-size: 0.9rem; opacity: 0.75; margin-left: 8px; }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .input-card {
+      background: white;
+      border-radius: 12px;
+      padding: 28px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+    .input-card label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+      color: #2d3748;
+    }
+    .input-card textarea {
+      width: 100%;
+      height: 130px;
+      border: 2px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 12px;
+      font-size: 0.95rem;
+      resize: vertical;
+      outline: none;
+      transition: border 0.2s;
+      font-family: inherit;
+    }
+    .input-card textarea:focus { border-color: #0f4c81; }
+
+    .input-hint {
+      font-size: 0.8rem;
+      color: #718096;
+      margin-top: 6px;
+    }
+
+    .btn {
+      margin-top: 16px;
+      background: #0f4c81;
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .btn:hover { background: #1a69b8; }
+    .btn:active { transform: scale(0.98); }
+    .btn:disabled { background: #a0aec0; cursor: not-allowed; }
+
+    .examples {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .example-chip {
+      background: #ebf4ff;
+      color: #0f4c81;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      cursor: pointer;
+      border: 1px solid #bee3f8;
+      transition: background 0.2s;
+    }
+    .example-chip:hover { background: #bee3f8; }
+
+    /* Status bar */
+    .status {
+      margin-top: 24px;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      display: none;
+    }
+    .status.loading { background: #ebf8ff; color: #2b6cb0; display: block; }
+    .status.error   { background: #fff5f5; color: #c53030; display: block; }
+
+    /* Results */
+    .results-section { margin-top: 32px; }
+    .results-section h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: #2d3748;
+    }
+
+    .assessment-card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px 22px;
+      margin-bottom: 14px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.07);
+      border-left: 4px solid #0f4c81;
+      transition: box-shadow 0.2s;
+    }
+    .assessment-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .card-name {
+      font-weight: 700;
+      font-size: 1rem;
+      color: #1a202c;
+    }
+    .card-name a {
+      color: #0f4c81;
+      text-decoration: none;
+    }
+    .card-name a:hover { text-decoration: underline; }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 8px;
+    }
+    .badge {
+      padding: 2px 9px;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      font-weight: 600;
+    }
+    .badge-type { background: #e9d8fd; color: #553c9a; }
+    .badge-duration { background: #fefcbf; color: #744210; }
+    .badge-remote { background: #c6f6d5; color: #22543d; }
+    .badge-adaptive { background: #bee3f8; color: #2a4365; }
+
+    .card-desc {
+      margin-top: 10px;
+      font-size: 0.86rem;
+      color: #4a5568;
+      line-height: 1.5;
+    }
+
+    .rank-number {
+      background: #0f4c81;
+      color: white;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #a0aec0;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>SHL Assessment Recommender <span>AI-Powered</span></h1>
+  </div>
+</header>
+
+<main>
+  <div class="input-card">
+    <label for="queryInput">Enter a Job Description, query, or paste a JD URL</label>
+    <textarea
+      id="queryInput"
+      placeholder="e.g. I am hiring for Java developers who can also collaborate effectively with my business teams. Looking for an assessment that can be completed in 40 minutes."
+    ></textarea>
+    <div class="input-hint">You can enter a natural language query, paste a full job description, or enter a URL pointing to a JD.</div>
+
+    <div class="examples">
+      <strong style="font-size:0.78rem;color:#718096;align-self:center">Try:</strong>
+      <span class="example-chip" onclick="setExample(0)">Java developer + collaboration</span>
+      <span class="example-chip" onclick="setExample(1)">Sales new grad, 30 min</span>
+      <span class="example-chip" onclick="setExample(2)">Senior Data Analyst</span>
+      <span class="example-chip" onclick="setExample(3)">Analyst — cognitive + personality</span>
+    </div>
+
+    <button class="btn" id="searchBtn" onclick="getRecommendations()">
+      🔍 Find Assessments
+    </button>
+  </div>
+
+  <div class="status" id="statusBar"></div>
+
+  <div class="results-section" id="resultsSection" style="display:none">
+    <h2 id="resultsTitle">Recommended Assessments</h2>
+    <div id="resultsList"></div>
+  </div>
+</main>
+
+<footer>
+  SHL Assessment Recommendation System · Powered by Gemini + Sentence Transformers
+</footer>
+
+<script>
+  // ── Change this to your deployed API URL ──
+  const API_BASE = "http://localhost:8000";
+
+  const EXAMPLES = [
+    "I am hiring for Java developers who can also collaborate effectively with my business teams. Looking for an assessment that can be completed in 40 minutes.",
+    "I am new looking for new graduates in my sales team, suggest a 30 min long assessment.",
+    "I want to hire a Senior Data Analyst with 5 years of experience and expertise in Python, SQL and Tableau.",
+    "I am hiring for an analyst and want applications to screen using Cognitive and personality tests, what options are available within 45 mins.",
+  ];
+
+  const TYPE_LABELS = {
+    A: "Ability & Aptitude",
+    B: "Biodata & SJT",
+    C: "Competencies",
+    D: "Development & 360",
+    E: "Exercises",
+    K: "Knowledge & Skills",
+    P: "Personality & Behavior",
+    S: "Simulations",
+  };
+
+  function setExample(i) {
+    document.getElementById("queryInput").value = EXAMPLES[i];
+  }
+
+  function setStatus(msg, type) {
+    const el = document.getElementById("statusBar");
+    el.textContent = msg;
+    el.className = `status ${type}`;
+  }
+
+  function hideStatus() {
+    document.getElementById("statusBar").className = "status";
+  }
+
+  async function getRecommendations() {
+    const query = document.getElementById("queryInput").value.trim();
+    if (!query) {
+      alert("Please enter a query or job description.");
+      return;
+    }
+
+    const btn = document.getElementById("searchBtn");
+    btn.disabled = true;
+    btn.textContent = "⏳ Finding assessments...";
+    setStatus("🔍 Analyzing query and searching assessments… this may take 10–20 seconds.", "loading");
+    document.getElementById("resultsSection").style.display = "none";
+
+    try {
+      const resp = await fetch(`${API_BASE}/recommend`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ query }),
+      });
+
+      if (!resp.ok) {
+        const err = await resp.json();
+        throw new Error(err.detail || `HTTP ${resp.status}`);
+      }
+
+      const data = await resp.json();
+      renderResults(data.recommended_assessments);
+      hideStatus();
+    } catch (e) {
+      setStatus(`❌ Error: ${e.message}`, "error");
+    } finally {
+      btn.disabled = false;
+      btn.textContent = "🔍 Find Assessments";
+    }
+  }
+
+  function renderResults(assessments) {
+    const section = document.getElementById("resultsSection");
+    const list = document.getElementById("resultsList");
+    const title = document.getElementById("resultsTitle");
+
+    title.textContent = `${assessments.length} Recommended Assessment${assessments.length !== 1 ? "s" : ""}`;
+    list.innerHTML = "";
+
+    assessments.forEach((a, i) => {
+      const types = (a.test_type || []).map(t =>
+        `<span class="badge badge-type">${t} — ${TYPE_LABELS[t] || t}</span>`
+      ).join("");
+
+      const duration = a.duration
+        ? `<span class="badge badge-duration">⏱ ${a.duration} min</span>` : "";
+
+      const remote = a.remote_support === "Yes"
+        ? `<span class="badge badge-remote">✅ Remote</span>` : "";
+
+      const adaptive = a.adaptive_support === "Yes"
+        ? `<span class="badge badge-adaptive">🧠 Adaptive</span>` : "";
+
+      const desc = a.description
+        ? `<div class="card-desc">${a.description.substring(0, 200)}${a.description.length > 200 ? "…" : ""}</div>`
+        : "";
+
+      list.innerHTML += `
+        <div class="assessment-card">
+          <div class="card-header">
+            <div>
+              <div class="card-name">
+                <a href="${a.url}" target="_blank">${a.name || "Assessment"}</a>
+              </div>
+              <div class="badges">${types}${duration}${remote}${adaptive}</div>
+            </div>
+            <div class="rank-number">${i + 1}</div>
+          </div>
+          ${desc}
+        </div>
+      `;
+    });
+
+    section.style.display = "block";
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+
+  // Allow Enter key to submit (Shift+Enter for newline)
+  document.getElementById("queryInput").addEventListener("keydown", (e) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      getRecommendations();
+    }
+  });
+</script>
+
+</body>
+</html>

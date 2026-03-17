@@ -1,0 +1,20 @@
+services:
+  # FastAPI Backend (free tier)
+  - type: web
+    name: shl-recommender-api
+    env: python
+    buildCommand: pip install -r requirements.txt && playwright install chromium && playwright install-deps
+    startCommand: uvicorn api.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false   # Set this manually in Render dashboard
+    autoDeploy: true
+    plan: free
+
+  # Static frontend (served via Render static site - free)
+  - type: web
+    name: shl-recommender-frontend
+    env: static
+    staticPublishPath: frontend
+    autoDeploy: true
+    plan: free
