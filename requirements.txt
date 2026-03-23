@@ -1,26 +1,13 @@
-# Core
 fastapi==0.111.0
 uvicorn==0.30.1
 python-dotenv==1.0.1
 pydantic==2.7.1
-
-# Scraping
-playwright==1.44.0
-beautifulsoup4==4.12.3
 requests==2.32.3
+beautifulsoup4==4.12.3
 lxml==5.2.2
-
-# Embeddings + Vector DB
 sentence-transformers==3.0.1
 chromadb==0.5.3
-numpy==1.26.4
-
-# LLM (Gemini)
 google-generativeai==0.7.2
-
-# Data handling
-pandas==2.2.2
 openpyxl==3.1.4
-
-# Evaluation
-scikit-learn==1.5.0
+pandas==2.2.2
+nest_asyncio==1.6.0
