@@ -27,3 +27,6 @@ htmlcov/
 .coverage
 
 data/chroma_db/
+
+~$*
+*.tmp
