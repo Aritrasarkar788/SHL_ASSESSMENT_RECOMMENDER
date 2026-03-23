@@ -1,0 +1,267 @@
+{
+  "mean_recall_at_10": 0.31111111111111117,
+  "queries": [
+    {
+      "query": "I am hiring for Java developers who can also collaborate effectively with my business teams. Looking",
+      "true_count": 5,
+      "predicted_count": 10,
+      "recall_at_10": 0.6,
+      "predicted_urls": [
+        "https://www.shl.com/products/product-catalog/view/java-8-new/",
+        "https://www.shl.com/products/product-catalog/view/core-java-advanced-level-new/",
+        "https://www.shl.com/products/product-catalog/view/java-frameworks-new/",
+        "https://www.shl.com/products/product-catalog/view/java-design-patterns-new/",
+        "https://www.shl.com/products/product-catalog/view/smart-interview-live-coding/",
+        "https://www.shl.com/products/product-catalog/view/java-platform-enterprise-edition-7-java-ee-7/",
+        "https://www.shl.com/products/product-catalog/view/java-web-services-new/",
+        "https://www.shl.com/products/product-catalog/view/enterprise-java-beans-new/",
+        "https://www.shl.com/products/product-catalog/view/business-communication-adaptive/",
+        "https://www.shl.com/products/product-catalog/view/interpersonal-communications/"
+      ],
+      "true_urls": [
+        "https://www.shl.com/solutions/products/product-catalog/view/automata-fix-new/",
+        "https://www.shl.com/solutions/products/product-catalog/view/core-java-entry-level-new/",
+        "https://www.shl.com/solutions/products/product-catalog/view/java-8-new/",
+        "https://www.shl.com/solutions/products/product-catalog/view/core-java-advanced-level-new/",
+        "https://www.shl.com/products/product-catalog/view/interpersonal-communications/"
+      ]
+    },
+    {
+      "query": "I want to hire new graduates for a sales role in my company, the budget is for about an hour for eac",
+      "true_count": 9,
+      "predicted_count": 10,
+      "recall_at_10": 0.3333333333333333,
+      "predicted_urls": [
+        "https://www.shl.com/products/product-catalog/view/entry-level-sales-solution/",
+        "https://www.shl.com/products/product-catalog/view/retail-sales-and-service-simulation/",
+        "https://www.shl.com/products/product-catalog/view/entry-level-customer-serv-retail-and-contact-center/",
+        "https://www.shl.com/products/product-catalog/view/salestransformationreport2-0-individualcontributor/",
+        "https://www.shl.com/products/product-catalog/view/sales-and-service-phone-solution/",
+        "https://www.shl.com/products/product-catalog/view/customer-service-phone-solution/",
+        "https://www.shl.com/products/product-catalog/view/sales-profiler-cards/",
+        "https://www.shl.com/products/product-catalog/view/opq-mq-sales-report/",
+        "https://www.shl.com/products/product-catalog/view/interpersonal-communications/",
+        "https://www.shl.com/products/product-catalog/view/business-communication-adaptive/"
+      ],
+      "true_urls": [
+        "https://www.shl.com/solutions/products/product-catalog/view/entry-level-sales-7-1/",
+        "https://www.shl.com/solutions/products/product-catalog/view/entry-level-sales-sift-out-7-1/",
+        "https://www.shl.com/solutions/products/product-catalog/view/entry-level-sales-solution/",
+        "https://www.shl.com/solutions/products/product-catalog/view/sales-representative-solution/",
+        "https://www.shl.com/products/product-catalog/view/business-communication-adaptive/",
+        "https://www.shl.com/solutions/products/product-catalog/view/technical-sales-associate-solution/",
+        "https://www.shl.com/solutions/products/product-catalog/view/svar-spoken-english-indian-accent-new/",
+        "https://www.shl.com/products/product-catalog/view/interpersonal-communications/",
+        "https://www.shl.com/solutions/products/product-catalog/view/english-comprehension-new/"
+      ]
+    },
+    {
+      "query": "I am looking for a COO for my company in China and I want to see if they are culturally a right fit ",
+      "true_count": 6,
+      "predicted_count": 8,
+      "recall_at_10": 0.5,
+      "predicted_urls": [
+        "https://www.shl.com/products/product-catalog/view/global-skills-development-report/",
+        "https://www.shl.com/products/product-catalog/view/executive-scenarios-profile-report/",
+        "https://www.shl.com/products/product-catalog/view/managerial-scenarios-candidate-report/",
+        "https://www.shl.com/products/product-catalog/view/enterprise-leadership-report-2-0/",
+        "https://www.shl.com/products/product-catalog/view/opq-leadership-report/",
+        "https://www.shl.com/products/product-catalog/view/opq-team-types-and-leadership-styles-report/",
+        "https://www.shl.com/products/product-catalog/view/opq-team-impact-group-development-report/",
+        "https://www.shl.com/products/product-catalog/view/business-communication-adaptive/"
+      ],
+      "true_urls": [
+        "https://www.shl.com/products/product-catalog/view/enterprise-leadership-report/",
+        "https://www.shl.com/products/product-catalog/view/occupational-personality-questionnaire-opq32r/",
+        "https://www.shl.com/solutions/products/product-catalog/view/opq-leadership-report/",
+        "https://www.shl.com/solutions/products/product-catalog/view/opq-team-types-and-leadership-styles-report",
+        "https://www.shl.com/products/product-catalog/view/enterprise-leadership-report-2-0/",
+        "https://www.shl.com/solutions/products/product-catalog/view/global-skills-assessment/"
+      ]
+    },
+    {
+      "query": "KEY RESPONSIBITILES:\n\nManage the sound-scape of the station through appropriate creative and marketi",
+      "true_count": 5,
+      "predicted_count": 10,
+      "recall_at_10": 0.4,
+      "predicted_urls": [
+        "https://www.shl.com/products/product-catalog/view/interpersonal-communications/",
+        "https://www.shl.com/products/product-catalog/view/business-communication-adaptive/",
+        "https://www.shl.com/products/product-catalog/view/global-skills-development-report/",
+        "https://www.shl.com/products/product-catalog/view/marketing-new/",
+        "https://www.shl.com/products/product-catalog/view/sales-transformation-report-2-0-sales-manager/",
+        "https://www.shl.com/products/product-catalog/view/digital-readiness-development-report-manager/",
+        "https://www.shl.com/products/product-catalog/view/digital-advertising-new/",
+        "https://www.shl.com/products/product-catalog/view/programming-concepts/",
+        "https://www.shl.com/products/product-catalog/view/opq-team-types-and-leadership-styles-report/",
+        "https://www.shl.com/products/product-catalog/view/enterprise-leadership-report-2-0/"
+      ],
+      "true_urls": [
+        "https://www.shl.com/solutions/products/product-catalog/view/verify-verbal-ability-next-generation/",
+        "https://www.shl.com/solutions/products/product-catalog/view/shl-verify-interactive-inductive-reasoning/",
+        "https://www.shl.com/solutions/products/product-catalog/view/marketing-new/",
+        "https://www.shl.com/solutions/products/product-catalog/view/english-comprehension-new/",
+        "https://www.shl.com/products/product-catalog/view/interpersonal-communications/"
+      ]
+    },
+    {
+      "query": "Content Writer required, expert in English and SEO.",
+      "true_count": 5,
+      "predicted_count": 10,
+      "recall_at_10": 0.6,
+      "predicted_urls": [
+        "https://www.shl.com/products/product-catalog/view/search-engine-optimization-new/",
+        "https://www.shl.com/products/product-catalog/view/written-english-v1/",
+        "https://www.shl.com/products/product-catalog/view/proofreading-v1/",
+        "https://www.shl.com/products/product-catalog/view/business-communication-adaptive/",
+        "https://www.shl.com/products/product-catalog/view/interpersonal-communications/",
+        "https://www.shl.com/products/product-catalog/view/drupal-new/",
+        "https://www.shl.com/products/product-catalog/view/htmlcss-new/",
+        "https://www.shl.com/products/product-catalog/view/digital-advertising-new/",
+        "https://www.shl.com/products/product-catalog/view/enterprise-leadership-report-2-0/",
+        "https://www.shl.com/products/product-catalog/view/writex-email-writing-managerial-new/"
+      ],
+      "true_urls": [
+        "https://www.shl.com/products/product-catalog/view/english-comprehension-new/",
+        "https://www.shl.com/solutions/products/product-catalog/view/drupal-new/",
+        "https://www.shl.com/solutions/products/product-catalog/view/written-english-v1/",
+        "https://www.shl.com/solutions/products/product-catalog/view/occupational-personality-questionnaire-opq32r/",
+        "https://www.shl.com/solutions/products/product-catalog/view/search-engine-optimization-new/"
+      ]
+    },
+    {
+      "query": "Find me 1 hour long assesment for the below job at SHL\nJob Description\n\n Join a community that is sh",
+      "true_count": 9,
+      "predicted_count": 10,
+      "recall_at_10": 0.1111111111111111,
+      "predicted_urls": [
+        "https://www.shl.com/products/product-catalog/view/smart-interview-live-coding/",
+        "https://www.shl.com/products/product-catalog/view/software-business-analysis/",
+        "https://www.shl.com/products/product-catalog/view/java-web-services-new/",
+        "https://www.shl.com/products/product-catalog/view/microsoft-sql-server-2014-programming/",
+        "https://www.shl.com/products/product-catalog/view/entry-level-technical-support-solution/",
+        "https://www.shl.com/products/product-catalog/view/agile-software-development/",
+        "https://www.shl.com/products/product-catalog/view/programming-concepts/",
+        "https://www.shl.com/products/product-catalog/view/java-frameworks-new/",
+        "https://www.shl.com/products/product-catalog/view/java-platform-enterprise-edition-7-java-ee-7/",
+        "https://www.shl.com/products/product-catalog/view/htmlcss-new/"
+      ],
+      "true_urls": [
+        "https://www.shl.com/solutions/products/product-catalog/view/automata-selenium/",
+        "https://www.shl.com/products/product-catalog/view/professional-7-1-solution/",
+        "https://www.shl.com/solutions/products/product-catalog/view/javascript-new/",
+        "https://www.shl.com/solutions/products/product-catalog/view/htmlcss-new/",
+        "https://www.shl.com/solutions/products/product-catalog/view/css3-new/",
+        "https://www.shl.com/solutions/products/product-catalog/view/selenium-new/",
+        "https://www.shl.com/solutions/products/product-catalog/view/sql-server-new/",
+        "https://www.shl.com/solutions/products/product-catalog/view/automata-sql-new/",
+        "https://www.shl.com/solutions/products/product-catalog/view/manual-testing-new/"
+      ]
+    },
+    {
+      "query": "ICICI Bank Assistant Admin, Experience required 0-2 years, test should be 30-40 mins long",
+      "true_count": 6,
+      "predicted_count": 10,
+      "recall_at_10": 0.16666666666666666,
+      "predicted_urls": [
+        "https://www.shl.com/products/product-catalog/view/workplace-administration-skills-new/",
+        "https://www.shl.com/products/product-catalog/view/front-office-management-new/",
+        "https://www.shl.com/products/product-catalog/view/ms-office-basic-computer-literacy-new/",
+        "https://www.shl.com/products/product-catalog/view/ms-office-basic-computer-literacy-sim-new/",
+        "https://www.shl.com/products/product-catalog/view/verify-interactive-process-monitoring/",
+        "https://www.shl.com/products/product-catalog/view/ms-access-new/",
+        "https://www.shl.com/products/product-catalog/view/microsoft-outlook-2013-adaptive/",
+        "https://www.shl.com/products/product-catalog/view/entry-level-customer-service-general-solution/",
+        "https://www.shl.com/products/product-catalog/view/basic-computer-literacy-windows-10-new/",
+        "https://www.shl.com/products/product-catalog/view/ms-excel-new/"
+      ],
+      "true_urls": [
+        "https://www.shl.com/solutions/products/product-catalog/view/administrative-professional-short-form/",
+        "https://www.shl.com/solutions/products/product-catalog/view/verify-numerical-ability/",
+        "https://www.shl.com/solutions/products/product-catalog/view/financial-professional-short-form/",
+        "https://www.shl.com/solutions/products/product-catalog/view/bank-administrative-assistant-short-form/",
+        "https://www.shl.com/solutions/products/product-catalog/view/general-entry-level-data-entry-7-0-solution/",
+        "https://www.shl.com/solutions/products/product-catalog/view/basic-computer-literacy-windows-10-new/"
+      ]
+    },
+    {
+      "query": "We're looking for a Marketing Manager who can drive Recro\u2019s brand positioning, community growth, and",
+      "true_count": 5,
+      "predicted_count": 9,
+      "recall_at_10": 0.2,
+      "predicted_urls": [
+        "https://www.shl.com/products/product-catalog/view/marketing-new/",
+        "https://www.shl.com/products/product-catalog/view/global-skills-development-report/",
+        "https://www.shl.com/products/product-catalog/view/search-engine-optimization-new/",
+        "https://www.shl.com/products/product-catalog/view/sales-transformation-report-2-0-sales-manager/",
+        "https://www.shl.com/products/product-catalog/view/sales-transformation-report-sales-manager/",
+        "https://www.shl.com/products/product-catalog/view/business-communication-adaptive/",
+        "https://www.shl.com/products/product-catalog/view/digital-advertising-new/",
+        "https://www.shl.com/products/product-catalog/view/interviewing-and-hiring-concepts-u-s/",
+        "https://www.shl.com/products/product-catalog/view/retail-sales-and-service-simulation/"
+      ],
+      "true_urls": [
+        "https://www.shl.com/solutions/products/product-catalog/view/manager-8-0-jfa-4310/",
+        "https://www.shl.com/solutions/products/product-catalog/view/microsoft-excel-365-essentials-new/",
+        "https://www.shl.com/solutions/products/product-catalog/view/digital-advertising-new/",
+        "https://www.shl.com/solutions/products/product-catalog/view/shl-verify-interactive-inductive-reasoning/",
+        "https://www.shl.com/solutions/products/product-catalog/view/writex-email-writing-sales-new/"
+      ]
+    },
+    {
+      "query": "Based on the JD below recommend me assessment for the Consultant position in my organizations. The a",
+      "true_count": 5,
+      "predicted_count": 10,
+      "recall_at_10": 0.0,
+      "predicted_urls": [
+        "https://www.shl.com/products/product-catalog/view/interviewing-and-hiring-concepts-u-s/",
+        "https://www.shl.com/products/product-catalog/view/universal-competency-framework-job-profiling-guide/",
+        "https://www.shl.com/products/product-catalog/view/managerial-scenarios-candidate-report/",
+        "https://www.shl.com/products/product-catalog/view/executive-scenarios-profile-report/",
+        "https://www.shl.com/products/product-catalog/view/managerial-scenarios-narrative-report/",
+        "https://www.shl.com/products/product-catalog/view/enterprise-leadership-report-2-0/",
+        "https://www.shl.com/products/product-catalog/view/opq-team-types-and-leadership-styles-report/",
+        "https://www.shl.com/products/product-catalog/view/hipo-unlocking-potential-report-2-0/",
+        "https://www.shl.com/products/product-catalog/view/opq-team-types-and-leadership-styles-profile/",
+        "https://www.shl.com/products/product-catalog/view/global-skills-development-report/"
+      ],
+      "true_urls": [
+        "https://www.shl.com/solutions/products/product-catalog/view/shl-verify-interactive-numerical-calculation/",
+        "https://www.shl.com/solutions/products/product-catalog/view/administrative-professional-short-form/",
+        "https://www.shl.com/solutions/products/product-catalog/view/verify-verbal-ability-next-generation/",
+        "https://www.shl.com/products/product-catalog/view/occupational-personality-questionnaire-opq32r/",
+        "https://www.shl.com/solutions/products/product-catalog/view/professional-7-1-solution/"
+      ]
+    },
+    {
+      "query": "I want to hire a Senior Data Analyst with 5 years of experience and expertise in SQL, Excel and Pyth",
+      "true_count": 10,
+      "predicted_count": 10,
+      "recall_at_10": 0.2,
+      "predicted_urls": [
+        "https://www.shl.com/products/product-catalog/view/sql-new/",
+        "https://www.shl.com/products/product-catalog/view/ms-excel-new/",
+        "https://www.shl.com/products/product-catalog/view/data-science-new/",
+        "https://www.shl.com/products/product-catalog/view/data-warehousing-concepts/",
+        "https://www.shl.com/products/product-catalog/view/software-business-analysis/",
+        "https://www.shl.com/products/product-catalog/view/microsoft-sql-server-2014-programming/",
+        "https://www.shl.com/products/product-catalog/view/sql-server-analysis-services-%28ssas%29-%28new%29/",
+        "https://www.shl.com/products/product-catalog/view/sql-server-reporting-services-ssrs-new/",
+        "https://www.shl.com/products/product-catalog/view/entry-level-customer-service-general-solution/",
+        "https://www.shl.com/products/product-catalog/view/entry-level-technical-support-solution/"
+      ],
+      "true_urls": [
+        "https://www.shl.com/solutions/products/product-catalog/view/sql-server-analysis-services-%28ssas%29-%28new%29/",
+        "https://www.shl.com/solutions/products/product-catalog/view/sql-server-new/",
+        "https://www.shl.com/solutions/products/product-catalog/view/automata-sql-new/",
+        "https://www.shl.com/solutions/products/product-catalog/view/python-new/",
+        "https://www.shl.com/solutions/products/product-catalog/view/tableau-new/",
+        "https://www.shl.com/solutions/products/product-catalog/view/microsoft-excel-365-new/",
+        "https://www.shl.com/solutions/products/product-catalog/view/microsoft-excel-365-essentials-new/",
+        "https://www.shl.com/solutions/products/product-catalog/view/professional-7-0-solution-3958/",
+        "https://www.shl.com/solutions/products/product-catalog/view/professional-7-1-solution/",
+        "https://www.shl.com/solutions/products/product-catalog/view/data-warehousing-concepts/"
+      ]
+    }
+  ]
+}
